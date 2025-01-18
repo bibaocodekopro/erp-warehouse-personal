@@ -38,7 +38,7 @@ return [
     'guards' => [
         'web' => [
             'driver' => 'session',
-            'provider' => 'users',
+            'provider' => 'people',
         ],
     ],
 
@@ -60,16 +60,11 @@ return [
     */
 
     'providers' => [
-        'users' => [
-            'driver' => 'eloquent',
-            'model' => App\Models\User::class,
-        ],
-
-        // 'users' => [
-        //     'driver' => 'database',
-        //     'table' => 'users',
-        // ],
+    'people' => [
+        'driver' => 'eloquent',
+        'model' => App\Models\Person::class, // Chỉ định model Person
     ],
+],
 
     /*
     |--------------------------------------------------------------------------
